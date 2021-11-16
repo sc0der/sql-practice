@@ -20,12 +20,12 @@ CREATE TABLE IF NOT EXISTS products(
 
 CREATE table if not EXISTS stores(
     id serial primary key,
-    name varchar not null,
+    name varchar not null
 );
 
 create table if not EXISTS stores_products(
     store_id integer NOT NULL,
     product_id integer NOT NULL,
     FOREIGN KEY(store_id) REFERENCES stores(id),
-    FOREIGN KEY(product_id) REFERENCES products(id),
-)
+    FOREIGN KEY(product_id) REFERENCES products(id)
+);
