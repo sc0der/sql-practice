@@ -1,3 +1,4 @@
+-- creating
 CREATE TABLE users(
     id int primary key,
     first_name varchar not null,
