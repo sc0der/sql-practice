@@ -29,3 +29,17 @@ create table if not EXISTS stores_products(
     FOREIGN KEY(store_id) REFERENCES stores(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );
+
+
+-- inserts
+
+INSERT INTO vendors (name) VALUES
+('one'),
+('two'),
+('three');
+
+
+insert into products(name, expiration, vendor_id) values
+('first', '2021-09-09', 1 ),
+('second', '2021-09-09', 2 ),
+('third', '2021-09-09', 3 );
