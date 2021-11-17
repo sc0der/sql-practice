@@ -44,3 +44,6 @@ insert into products(name, expiration, vendor_id) values
 ('first', '2021-09-09', 1 ),
 ('second', '2021-09-09', 2 ),
 ('third', '2021-09-09', 3 );
+
+
+SELECT * from vendors where id = '1';
