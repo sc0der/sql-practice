@@ -48,4 +48,7 @@ insert into products(name, expiration, vendor_id) values
 
 SELECT * from vendors where id = '1';
 
-CREATE INDEX CONCURRENTLY name_index on products USING gist(name);
+CREATE INDEX CONCURRENTLY name_index on vendors USING gin(name);
+
+CREATE INDEX CONCURRENTLY name_index on vendors USING gist(name);
+
