@@ -48,8 +48,15 @@ insert into products(name, expiration, vendor_id) values
 
 SELECT * from vendors where id = '1';
 
+
+-- index
 CREATE INDEX CONCURRENTLY name_index on vendors USING gin(name);
 
 CREATE INDEX CONCURRENTLY name_index on vendors USING gist(name);
 
 CREATE INDEX CONCURRENTLY name_index on vendors USING spgist(name);
+
+
+-- view
+
+CREATE VIEW product_with_nearest_expiration AS SELECT p.name FROM products p WHERE products.expiration < '2018-08-01';
