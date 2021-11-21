@@ -58,5 +58,6 @@ CREATE INDEX CONCURRENTLY name_index on vendors USING spgist(name);
 
 
 -- view
-
 CREATE VIEW product_with_nearest_expiration AS SELECT p.name FROM products p WHERE products.expiration < '2018-08-01';
+
+drop view product_with_nearest_expiration;
