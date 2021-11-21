@@ -52,3 +52,4 @@ CREATE INDEX CONCURRENTLY name_index on vendors USING gin(name);
 
 CREATE INDEX CONCURRENTLY name_index on vendors USING gist(name);
 
+CREATE INDEX CONCURRENTLY name_index on vendors USING spgist(name);
